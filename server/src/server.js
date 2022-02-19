@@ -13,8 +13,10 @@ app.use(express.urlencoded({ extended: true }));
 
 //Router
 const userRouter = require("./routes/user.route.js");
+const lunchRouter = require("./routes/lunch.router.js");
 
 app.use("/api/user", userRouter);
+app.use("/api/lunch", lunchRouter);
 
 app.listen(port, () => {
   console.log(`App is listing to ${port}`);
